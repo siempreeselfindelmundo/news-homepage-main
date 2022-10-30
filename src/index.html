@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="/dist/output.css" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | News homepage</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    
+  </style>
+</head>
+<body class="container mx-auto bg-off-white w-screen relative">
+  
+  <!-- Desktop navbar -->
+  <header class="flex items-center justify-between py-12">
+    <img src="../assets/images/logo.svg" alt="logo" class="ml-4 lg:ml-0">
+   
+    <!-- mobile navbar toggler -->
+    <button id="openmenu" class=" lg:hidden">
+      <img src="../assets/images/icon-menu.svg" alt="open menu" class="mr-4 ">
+    </button>
+    
+    <nav class="text-dark-gray-blue space-x-6 hidden lg:flex">
+        <a href="#" class=" hover:text-softred">Home</a>
+        <a href="#" class=" hover:text-softred">New</a>
+        <a href="#" class=" hover:text-softred">Popular</a>
+        <a href="#" class=" hover:text-softred">Trending</a>
+        <a href="#" class=" hover:text-softred">Categories</a>
+    </nav>
+  </header>
+  <!-- Mobile off canvas navbar -->
+  <aside id="mobile-menu" class="fixed top-0 right-0 h-screen w-screen bg-very-dark-blue/30 lg:hidden hidden">
+    <nav id="mobilenav" class="w-2/3 h-screen absolute top-0 bg-off-white -right-56 transition delay-500 duration-700">
+      <button id="closemenu" class="lg:hidden ml-auto absolute right-4 top-12">
+        <img src="../assets/images/icon-menu-close.svg" alt="close menu" class="">
+      </button>
+      <ul class="text-very-dark-blue mt-36 ml-8 space-y-6">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Popular</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">Categories</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="grid lg:grid-cols-3 grid-cols-1 p-4 lg:p-0"> <!-- row 1-->
+    <div class="lg:col-span-2 "> <!--col 1-->
+      <img src="../assets/images/image-web-3-desktop.jpg" alt="web3" class="hidden lg:block">
+      <img src="../assets/images/image-web-3-mobile.jpg" alt="web3" class="lg:hidden ">
+      <div class="grid lg:grid-cols-2 mt-6 lg:mt-8">
+        <div class="lg:pr-7 ">
+          <h2 class="font-extrabold	text-4xl lg:text-6xl">The Bright Future of <br class="hidden lg:block"> Web 3.0?</h2>
+        </div>
+
+        <div class="h-full lg:pr-7 flex flex-col justify-between mt-4 lg:mt-0">
+          <p class="text-dark-gray-blue">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+          <button class="bg-softred uppercase text-off-white px-8 py-3.5 text-[14px] tracking-wider mt-4 lg:mt-7 hover:bg-very-dark-blue self-start">Read more</button>
+        </div>
+
+      </div>
+    </div>  <!-- /col 1-->
+    <div class="lg:pl-5 py-0 lg:ml-4 mt-16 lg:mt-0">  <!--col 2-->
+      <div class="bg-very-dark-blue py-7 px-6 h-full">
+        <h3 class="text-softorange text-5xl font-extrabold">New</h3>
+        <div class="border-b border-b-dark-gray-blue py-9 ">
+          <a href="#" class="text-off-white hover:text-softorange font-bold text-2xl">Hydrogen VS Electric Cars</a>
+          <p class="text-gray-blue mt-2"> Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </div>
+        <div class="border-b border-b-dark-gray-blue py-9 ">
+          <a href="#" class="text-off-white hover:text-softorange font-bold text-2xl">The Downsides of AI Artistry</a>
+          <p class="text-gray-blue mt-2"> What are the possible adverse effects of on-demand AI image generation?</p>
+        </div>
+        <div class="py-9">
+          <a href="#" class="text-off-white hover:text-softorange font-bold  text-2xl">Is VC Funding Drying Up?</a>
+          <p class="text-gray-blue mt-2"> Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        </div>
+      </div>
+
+    </div> <!-- /col 2 -->
+  </main> <!-- /row 1 -->
+  <section class="grid lg:grid-cols-3 lg:grid-rows-1 mt-16 lg:mt-20 lg:h-40 p-4 gap-y-9"> <!-- row 2 -->
+      <div class="flex items-start h-40 lg:h-full"> <!-- col 1 -->
+        <img src="../assets/images/image-retro-pcs.jpg" alt="retro pc" class="h-full">
+        <div class="h-full ml-6 py-5 flex flex-col justify-center lg:space-y-5">
+          <p class="text-gray-blue text-3xl lg:text-5xl font-bold grow basis-1/3">01</p>
+          <a href="#" class="text-lg font-bold hover:text-softred basis-1/3">Reviving Retro PCs</a>
+          <p class="text-[15px] text-dark-gray-blue basis-1/3">What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </div> <!-- /col 1 -->
+      <div class="flex items-start h-40 lg:h-full"> <!-- col 2 -->
+        <img src="../assets/images/image-top-laptops.jpg" alt="laptop keyboard" class="h-full">
+        <div class="h-full ml-6 py-5 flex flex-col justify-center lg:space-y-5">
+          <p class="text-gray-blue text-3xl lg:text-5xl font-bold grow basis-1/3">02</p>
+          <a href="#" class="text-lg font-bold hover:text-softred basis-1/3">Top 10 Laptops of 2022</a>
+          <p class="text-[15px] text-dark-gray-blue basis-1/3">Our best picks for various needs and budgets.</p>
+        </div>
+      </div> <!-- /col 2 -->
+      <div class="flex items-start h-40 lg:h-full"> <!-- col 3 -->
+        <img src="../assets/images/image-gaming-growth.jpg" alt="ps5 joystick" class="h-full">
+        <div class="h-full ml-6 py-5 flex flex-col justify-center lg:space-y-5">
+          <p class="text-gray-blue text-3xl lg:text-5xl font-bold grow basis-1/3">03</p>
+          <a href="#" class="text-lg font-bold hover:text-softred basis-1/3">The Growth of Gaming</a>
+          <p class="text-[15px] text-dark-gray-blue basis-1/3">How the pandemic has sparked fresh opportunities..</p>
+        </div>
+      </div> <!-- /col 3 -->
+        
+  
+  </section> <!-- /row 2 -->
+
+  <footer class="attribution mt-24 py-3 text-dark-gray-blue">
+    Challenge by <a class="text-very-dark-blue hover:text-softred" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <br class="lg:hidden">
+    Coded with ♥️ by <a class="text-very-dark-blue hover:text-softred" href="https://github.com/siempreeselfindelmundo" target="_blank">Loreto Vásquez</a>.
+  </footer>
+
+  <script>
+    let openmenu = document.getElementById("openmenu");
+    let menu = document.getElementById("mobile-menu");
+    let closemennu = document.getElementById("closemenu");
+    let mobilenav = document.getElementById("mobilenav");
+
+    openmenu.onclick = function(){
+      menu.classList.toggle("hidden");
+      mobilenav.classList.remove("-right-56");
+      mobilenav.classList.add("right-0");
+    }
+
+    closemenu.onclick = function(){
+      menu.classList.toggle("hidden");
+      /* mobilenav.classList.toggle("translate-x-full"); */
+
+    }
+      
+    
+
+  </script>
+</body>
+</html>
